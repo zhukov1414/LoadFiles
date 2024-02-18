@@ -34,4 +34,4 @@ docker compose exec backend python manage.py migrate
 
 ## Cсылка на swagger:
 Тестирование с файлами проводить через postman
-https://localhost:8000/swagger
+https://localhost:8000/swagger/
