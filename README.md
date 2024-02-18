@@ -28,7 +28,7 @@ processed: поле типа BooleanField, указывающее, был ли �
 
 ```bash
 docker compose up
-docker compose exec backend python manage.py migrate
+docker compose exec picasso python manage.py migrate
 ```
 
 
