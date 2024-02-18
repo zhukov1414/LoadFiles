@@ -34,5 +34,5 @@ docker compose exec backend python manage.py migrate
 
 ## Cсылки на проект:
 
-[Сваггер](https://localhost:8000/swagger)  
+https://localhost:8000/swagger
  
