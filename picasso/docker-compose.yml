@@ -1,0 +1,34 @@
+version: '3.3'
+
+volumes:
+  static:
+
+services:
+  backend:
+    build: ./picasso/
+    volumes:
+      - static:/static
+    ports:
+      - 8000:8000
+    networks:
+      - mynetwork
+
+  redis:
+    image: "redis:latest"
+    ports:
+      - 6379:6379
+    networks:
+      - mynetwork
+
+  celery:
+    build: ./picasso/
+    volumes:
+      - static:/static
+    depends_on:
+      - redis
+    command: celery -A picasso worker -l info
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
