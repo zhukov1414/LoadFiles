@@ -24,11 +24,13 @@ processed: поле типа BooleanField, указывающее, был ли �
 ## Как запустить локально:
 
 1. Клонировать репозиторий:
+2. Проверить название контейнера docker compose ps
 3. Запустить docker-compose.yml, выполнить миграции
 
 ```bash
 docker compose up
-docker compose exec picasso python manage.py migrate
+docker compose ps
+docker compose exec container_name python manage.py migrate
 ```
 
 
