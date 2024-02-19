@@ -23,14 +23,19 @@ processed: поле типа BooleanField, указывающее, был ли �
 
 ## Как запустить локально:
 
-1. Клонировать репозиторий:
-2. Проверить название контейнера docker compose ps
-3. Запустить docker-compose.yml, выполнить миграции
+1. Клонировать репозиторий
+2. Запустить docker-compose.yml
+3. Проверить название контейнера с бэкенд - docker compose ps
+4. Проверить название контейнера с celery - docker compose ps
+5. Выполнить миграции для backend
+6. Выполнить миграции для celery
 
 ```bash
 docker compose up
 docker compose ps
-docker compose exec container_name python manage.py migrate
+docker compose exec container_name_backend python manage.py migrate
+docker compose exec container_name_celery python manage.py migrate
+
 ```
 
 
