@@ -29,13 +29,14 @@ processed: поле типа BooleanField, указывающее, был ли �
 4. Проверить название контейнера с celery - docker compose ps
 5. Выполнить миграции для backend
 6. Выполнить миграции для celery
+7. По необходимости создать user
 
 ```bash
 docker-compose up
 docker compose ps
 docker exec container_name_backend python manage.py migrate
 docker exec container_name_celery python manage.py migrate
-
+docker exec container_name_backend python manage.py createsuperuser
 ```
 
 
