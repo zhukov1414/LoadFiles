@@ -31,7 +31,7 @@ processed: поле типа BooleanField, указывающее, был ли �
 6. Выполнить миграции для celery
 
 ```bash
-docker compose up
+docker-compose up
 docker compose ps
 docker compose exec container_name_backend python manage.py migrate
 docker compose exec container_name_celery python manage.py migrate
